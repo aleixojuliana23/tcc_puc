@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AquiPerto - Grupos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Criar Grupo</h1>
+
+    <form id="grupoForm">
+        <label>Nome do grupo:</label><br />
+        <input type="text" id="nome" required /><br /><br />
+
+        <label>Descrição:</label><br />
+        <input type="text" id="descricao" /><br /><br />
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <hr />
+
+    <h1>Criar Indicação</h1>
+
+    <form id="indicacaoForm">
+        <label>Grupo:</label><br />
+        <select id="grupoSelect" required></select><br /><br />
+
+        <label>Categoria</label><br />
+        <input type="text" id="categoria" required /><br /><br />
+
+        <label>Título:</label><br />
+        <input type="text" id="titulo" required /><br /><br />
+
+        <label>Descrição:</label><br />
+        <input type="text" id="descricaoIndicacao" /><br /><br />
+
+        <button type="submit">Salvar Indicação</button>
+    </form>
+
+    <h2>Grupos cadastrados</h2>
+    <ul id="listaGrupos"></ul>
+    <p id="mensagemIndicacao"></p>
+    <p id="mensagem"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
