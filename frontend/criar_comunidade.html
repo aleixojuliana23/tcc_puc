@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AquiPerto - Criar Comunidade</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="message-area" class="message" style="display: none;"></div>
+
+        <a href="/static/pagina_inicial_comunidades.html" class="button-back">
+            &larr; Voltar para Minhas Comunidades
+        </a>
+
+        <div class="card">
+            <h1>Criar Nova Comunidade</h1>
+            <p class="text-gray-600 mb-8">Preencha as informações abaixo para começar</p>
+
+            <form id="create-community-form" class="form-group">
+                <div class="space-y-2">
+                    <label for="community-name">Nome da Comunidade</Label>
+                    <input id="community-name" type="text" placeholder="Ex: Vila Madalena, Condomínio Aurora..."
+                        class="input-field" required />
+                </div>
+
+                <div class="space-y-2">
+                    <label for="community-type">Tipo</Label>
+                    <select id="community-type" class="select-field" required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="bairro">Bairro</option>
+                        <option value="condominio">Condomínio</option>
+                        <option value="cidade">Cidade</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label for="community-description">Descrição</label>
+                    <textarea id="community-description" placeholder="Descreva sua comunidade..." rows="5"
+                        class="textarea-field" required></textarea>
+                </div>
+
+                <button type="submit" class="button-primary">
+                    Criar comunidade
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/criar_comunidade_script.js"></script>
+</body>
+
+</html>

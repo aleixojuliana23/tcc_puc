@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AquiPerto - Detalhes da Comunidade</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="message-area" class="message" style="display: none;"></div>
+
+        <!-- Botão para voltar para a página inicial de comunidades -->
+        <a href="/static/pagina_inicial_comunidades.html" class="button-back">
+            &larr; Voltar
+        </a>
+
+        <div class="card card-lg mb-8">
+            <h1 id="nomeComunidadeDetalhes" class="text-gray-900 mb-2">Carregando Comunidade...</h1>
+            <p id="tipoComunidadeDetalhes" class="text-gray-500 mb-3">Tipo: Carregando...</p>
+            <p id="descricaoComunidadeDetalhes" class="text-gray-600">Descrição: Carregando...</p>
+        </div>
+
+        <hr />
+
+        <!-- Seção de Criação de Indicação -->
+        <h2>Criar Indicação para esta Comunidade</h2>
+        <!-- <--- ESTE É O FORMULÁRIO COM id="indicacaoForm" -->
+        <form id="indicacaoForm" class="card form-group">
+            <div class="space-y-2">
+                <label for="grupoSelect">Comunidade (ID):</label><br />
+                <!-- Este select será preenchido e desabilitado com a comunidade atual -->
+                <!-- É importante que ele tenha o ID "grupoSelect" -->
+                <select id="grupoSelect" name="grupo_id" class="select-field" required disabled></select><br />
+            </div>
+
+            <div class="space-y-2">
+                <label for="categoria">Categoria:</label><br />
+                <!-- É importante que ele tenha o ID "categoria" -->
+                <select id="categoria" name="categoria" class="select-field" required>
+                    <option value="">Selecione a categoria</option>
+                    <option value="produto">Produto</option>
+                    <option value="servico">Serviço</option>
+                    <option value="estabelecimento">Estabelecimento</option>
+                    <option value="evento">Evento</option>
+                    <option value="outro">Outro</option>
+                </select><br />
+            </div>
+
+            <div class="space-y-2">
+                <label for="titulo">Título:</label><br />
+                <!-- É importante que ele tenha o ID "titulo" -->
+                <input type="text" id="titulo" name="titulo" class="input-field" required /><br />
+            </div>
+
+            <div class="space-y-2">
+                <label for="descricaoIndicacao">Descrição:</label><br />
+                <!-- É importante que ele tenha o ID "descricaoIndicacao" -->
+                <textarea id="descricaoIndicacao" name="descricao" rows="5"
+                    class="textarea-field resize-none"></textarea><br />
+            </div>
+
+            <button type="submit" class="button-primary">Salvar Indicação</button>
+        </form>
+
+        <hr />
+
+        <!-- Seção de Listagem de Indicações para ESTA comunidade -->
+        <h2>Indicações Cadastradas para esta Comunidade</h2>
+        <ul id="listaIndicacoes">
+            <li>Carregando indicações...</li>
+        </ul>
+    </div>
+
+    <!-- <--- O SCRIPT DEVE SER CARREGADO AQUI, NO FINAL DO BODY, E COM O /static/ -->
+    <script src="/static/detalhes_comunidade_script.js"></script>
+</body>
+
+</html>

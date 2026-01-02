@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AquiPerto - Seleção de Comunidades</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="message-area" class="message" style="display: none;"></div>
+
+        <div class="flex justify-between items-center mb-8">
+            <div>
+                <h1>Minhas Comunidades</h1>
+                <p class="text-gray-600 mt-1">Selecione uma comunidade para explorar</p>
+            </div>
+            <button id="navegarParaPerfil" class="p-2_5 hover:bg-gray-100 rounded-full transition-colors">
+                <!-- Ícone de usuário simplificado -->
+                👤
+            </button>
+        </div>
+
+        <div id="listaDeComunidades" class="grid grid-gap-6 grid-cols-1 sm-grid-cols-2 lg-grid-cols-3 mb-8">
+            <!-- Comunidades serão carregadas aqui via JavaScript -->
+            <p>Carregando comunidades...</p>
+        </div>
+
+        <div class="grid md-grid-cols-2 grid-gap-6 max-w-4xl mx-auto">
+            <div class="card">
+                <h2>Entrar com código</h2>
+                <p class="text-gray-600 mb-4">Recebeu um convite? Cole o código aqui</p>
+                <div class="flex gap-3">
+                    <input id="codigoConvite" type="text" placeholder="Digite o código"
+                        class="input-field flex-1 h-12" />
+                    <button id="entrarComCodigo" class="button-secondary">
+                        Entrar
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-gradient-primary-to-secondary rounded-3xl shadow-sm p-8 text-white">
+                <h2 class="mb-4">Criar nova comunidade</h2>
+                <p class="mb-6 opacity-90">Comece sua própria comunidade e convide amigos e vizinhos</p>
+                <button id="criarNovaComunidade"
+                    class="w-full bg-white text-[#1E63F3] hover:bg-gray-100 rounded-full h-12">
+
+                    ➕ Criar comunidade
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESTA LINHA É A MAIS IMPORTANTE PARA ESTE ERRO: -->
+    <script src="/static/pagina_inicial_comunidades_script.js"></script>
+</body>
+
+</html>
